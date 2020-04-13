@@ -1,0 +1,338 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 93%);
+}
+body.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: rgb(255, 255, 255);
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+header {
+  align-items: center;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+}
+
+.dark header {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+header h2 {
+  padding-left: 40px;
+}
+
+.main .about-country {
+  padding-left: 20px;
+}
+
+.about-country h3 {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.search-and-filter-bar {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 0 4em;
+  display: flex;
+  justify-content: space-between;
+}
+.search-input {
+  margin-right: 1em;
+  width: 25em;
+  height: 4em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px rgb(179, 179, 179);
+}
+
+.dark .search-input {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+
+.filter-input {
+  width: 10em;
+}
+.filter-select {
+  border-radius: 5px;
+}
+
+.dark .filter-input {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+
+.dark .filter-select {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+  border: 1px solid white;
+}
+.dark .filter-option {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+
+.button-dark-mode {
+  width: 9em;
+  height: 2em;
+  border-radius: 5px;
+  margin-right: 40px;
+  /* box-shadow: 1px 1px 19px 3px rgb(187, 189, 176); */
+  cursor: pointer;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 8px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.button-dark-mode:hover {
+  box-shadow: 1px 1px 19px 3px rgb(187, 189, 176);
+}
+
+.dark .button-dark-mode {
+  background-color: hsl(207, 26%, 17%);
+  color: rgb(9, 23, 54);
+}
+.dark .detail-page {
+  background-color: hsl(207, 26%, 17%);
+  color: rgb(255, 255, 255);
+}
+
+.card-item {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 15em;
+  height: 20em;
+  margin: 35px;
+  box-shadow: 3px 4px 9px grey;
+  background-color: white;
+}
+.dark .card-item {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+.card-item:hover {
+  box-shadow: 1px 1px 34px 9px rgb(216, 247, 40);
+  cursor: pointer;
+}
+
+.flag-div {
+  display: flex;
+  width: 15em;
+  height: 10em;
+}
+
+.flag-image {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.detail-page {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  line-height: 1.5;
+  margin-top: 5px;
+  /* height: 50em; */
+}
+
+.detail-page .flag-div {
+  flex: 1;
+  padding: 5em;
+  height: 30em;
+  width: 100%;
+  padding-top: 7em;
+}
+
+.detail-page .flag-div .flag-image-page {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.detail-page .about-country-page {
+  margin: 1em;
+  margin-top: 8em;
+
+  display: flex;
+  flex-direction: column;
+  /* margin: 3em;
+  margin-top: 5em; */
+  flex: 1;
+}
+
+ul.info {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.hide {
+  display: none;
+}
+
+.button-back-page {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.button-back-page:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+
+.dark .button-back-page {
+  background-color: hsl(207, 26%, 17%);
+  color: rgb(9, 23, 54);
+}
+
+/* .country-name-page {
+} */
+
+.detail-page h3.country-name-page {
+  font-size: 2em;
+}
+
+.border-countries-page {
+  display: flex;
+  padding-top: 1em;
+  flex-wrap: wrap;
+}
+
+.border-countries-item {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+select {
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  background: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .search-input {
+    width: 22em;
+    height: 32px;
+    margin-bottom: 2em;
+  }
+  .filter-input {
+    width: 100%;
+  }
+  .search-and-filter-bar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .detail-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .detail-page .flag-div {
+    height: 20em;
+    padding: 0 1em;
+    padding-top: 4em;
+    width: 80%;
+    flex: 1;
+  }
+
+  .detail-page .flag-div .flag-image-page {
+    width: 100%;
+  }
+
+  .detail-page .about-country-page {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 3em;
+
+    flex: 1;
+  }
+
+  .detail-page .about-country-page ul.info-page {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  .detail-page .button-back-page {
+    position: absolute;
+    top: 100px;
+    left: 31px;
+  }
+  .detail-page .border-countries-page {
+    flex-wrap: wrap;
+  }
+  .button-dark-mode {
+    width: 126px;
+    height: 42px;
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 19px 3px rgb(187, 189, 176); */
+    cursor: pointer;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color: #ededed;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #777777;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+  }
+
+  .card-item:hover {
+    box-shadow: 1px 1px 34px 9px rgb(216, 247, 40);
+    cursor: pointer;
+  }
+}
