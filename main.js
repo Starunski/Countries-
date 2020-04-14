@@ -13,7 +13,7 @@
   const result = await getAllCountry();
   console.log(result);
 
-  //Замутили массив только с регионами /
+  //создали массив только с регионами /
   function sort(countries) {
     const allRegions = [];
     for (i = 0; i < countries.length; i++) {
@@ -38,17 +38,22 @@
   const allBorders = sortBorders(result);
   console.log(allBorders);
 
-  //   const allBordersItem = [];
-  //   allBorders.forEach(function (item) {
-  //     allBordersItem.push(item.length > 0);
-  //   });
-  // //   return allBorders;
-  //   console.log(allBordersItem);
-
-  //ща будем удалять дубликаты из массива с регионами/250 регионов дубликаты
+  //ща будем удалять дубликаты из массива с регионами ( 250 регионов )
   //1 sposob
   const uniqueRegions = [...new Set(allRegions)];
-
+  //   //2sposob
+  //   const uniqRegion2 = Array.from(new Set(allRegions));
+  //   console.log(uniqRegion);
+  //   //3 sposob
+  //   const uniqRegion3 = allRegions.filter(
+  //     (item, index) => index === allRegions.indexOf(item)
+  //   );
+  //   console.log(uniqRegion3);
+  //   //4 sposob
+  //   const uniqRegion4 = allRegions.reduce((uniq, item) => {
+  //     return uniq.includes(item) ? uniq : [...uniq, item];
+  //   }, []);
+  //   console.log(uniqRegion4);
   //добавили в фильтр селект по регонам наши 6 регионов
   const filterSelect = document.getElementsByClassName("filter-select")[0];
 
@@ -108,20 +113,6 @@
     }
   });
 
-  //   //2sposob
-  //   const uniqRegion2 = Array.from(new Set(allRegions));
-  //   console.log(uniqRegion);
-  //   //3 sposob
-  //   const uniqRegion3 = allRegions.filter(
-  //     (item, index) => index === allRegions.indexOf(item)
-  //   );
-  //   console.log(uniqRegion3);
-  //   //4 sposob
-  //   const uniqRegion4 = allRegions.reduce((uniq, item) => {
-  //     return uniq.includes(item) ? uniq : [...uniq, item];
-  //   }, []);
-  //   console.log(uniqRegion4);
-
   //создаем карточки для вставки на страницу/
   function createCards(countries) {
     const cards = [];
@@ -174,7 +165,7 @@
     return cards;
   }
 
-  //создали страницу с детальной инфой так сказать
+  //создали страницу с детальной инфой по каждой карточке
 
   function createDatailPage(country) {
     const DatailPages = [];
@@ -267,14 +258,14 @@
     return newPage;
   }
 
-  //добавляем вставляем ЕБУЧИЕ карты
+  //добавляем вставляем карточки
   const mainBlock = document.getElementsByClassName("main")[0];
   const cards = createCards(result);
   cards.forEach((card) => {
     mainBlock.appendChild(card);
   });
 
-  ////////////развернутая инфа при клике на карточку //////////////////////////////////////////
+  ////////////развернутая инфа при клике на карточку /////////////////
 
   const detailPage = document.querySelector(".main");
   detailPage.addEventListener("click", function (event) {
